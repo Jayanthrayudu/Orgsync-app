@@ -17,6 +17,37 @@ Note: Authentication (JWT/login) is **not implemented** as it was not required f
 - Pending requests badge with default values
 
 ---
+## ER Diagram (Database Design)
+
+![ER Diagram](ER_Diagram.pdf)
+
+> **PDF Version:** [ER_Diagram.pdf](ER_Diagram.pdf)  
+> **Relationship:** One `Organization` → Many `Users`  
+> `organizationId` in `Users` is a **Foreign Key (FK)** referencing `Organizations.id`
+
+### Entities:
+
+**Organizations**
+- `id`: INTEGER (PK)
+- `name`: STRING
+- `slug`: STRING
+- `organizationSLUG`: STRING
+- `primaryAdminName`: STRING
+- `primaryAdminEmail`: STRING
+- `supportEmail`: STRING
+- `phoneNo`: STRING
+- `status`: ENUM
+- `pendingRequests`: INTEGER
+
+**Users**
+- `id`: INTEGER (PK)
+- `username`: STRING
+- `email`: STRING
+- `role`: ENUM
+- `status`: ENUM
+- `organizationId`: INTEGER (FK)
+
+---
 
 ## Technologies Used
 
@@ -34,3 +65,5 @@ Note: Authentication (JWT/login) is **not implemented** as it was not required f
 **Other:**
 - Axios for API calls
 - Local storage for storing logos
+
+---
