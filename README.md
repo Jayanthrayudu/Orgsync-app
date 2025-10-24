@@ -19,7 +19,7 @@ Note: Authentication (JWT/login) is **not implemented** as it was not required f
 ---
 ## ER Diagram (Database Design)
 
-![ER Diagram](ER_Diagram.pdf)
+![ER Diagram](ER_Diagram.png)
 
 > **PDF Version:** [ER_Diagram.pdf](ER_Diagram.pdf)  
 > **Relationship:** One `Organization` → Many `Users`  
