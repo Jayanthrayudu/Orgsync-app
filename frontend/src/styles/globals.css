@@ -1,0 +1,65 @@
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #f1f5f9;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+/* Custom Card Shadow */
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Custom Button Hover */
+.btn-primary:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .table-responsive {
+    font-size: 0.875rem;
+  }
+}
+
+/* Avatar */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .contact-info-row > .col-md-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem; 
+  }
+}
+
+
+/* Sidebar slide animation */
+.sidebar-slide {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover background */
+.hover-bg-light:hover {
+  background-color: #f8f9fa !important;
+}
+
+/* Smooth main content shift */
+.transition-all {
+  transition: margin-left 0.3s ease-in-out;
+}
