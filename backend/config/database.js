@@ -1,5 +1,6 @@
+const fs = require('fs');
+const path = require('path');
 const { Sequelize } = require('sequelize');
-const fs = require('fs');        // Needed to read CA file
 require('dotenv').config();
 
 const sequelize = new Sequelize(
@@ -11,16 +12,10 @@ const sequelize = new Sequelize(
     dialect: 'mysql',
     dialectOptions: {
       ssl: {
-        ca: fs.readFileSync(process.env.DB_CA_PATH)  // Read CA for SSL
+        ca: fs.readFileSync(path.join(__dirname, 'ca.pem'))
       }
     },
     logging: process.env.NODE_ENV === 'development' ? console.log : false,
-    pool: {
-      max: 5,
-      min: 0,
-      acquire: 30000,
-      idle: 10000
-    }
   }
 );
 
