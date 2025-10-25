@@ -59,8 +59,10 @@ Note: Authentication (JWT/login) is **not implemented** as it was not required f
 **Backend:**
 - Node.js
 - Express.js
-- MongoDB (Atlas)
 - REST APIs
+
+**Database**
+- Mysql
 
 **Other:**
 - Axios for API calls
